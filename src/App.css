@@ -4,6 +4,22 @@
 
 @import "tw-animate-css";
 
+:root {
+  --app-primary: rgba(39, 174, 96, 1);
+  --disable-button: rgba(104, 109, 224, 1);
+  --primary: rgba(39, 174, 96, 1);
+}
+.embla {
+  overflow: hidden;
+}
+.embla__container {
+  display: flex;
+}
+.embla__slide {
+  flex: 0 0 100%;
+  min-width: 0;
+}
+
 /*---break--- */
 
 @custom-variant dark (&:is(.dark *));
@@ -11,6 +27,8 @@
 /*---break--- */
 
 @theme inline {
+  --color-app-primary: var(--app-primary);
+  --color-disable-button: var(--disable-button);
 
   --radius-sm: calc(var(--radius) - 4px);
 
@@ -86,7 +104,6 @@
 /*---break--- */
 
 :root {
-
   --radius: 0.625rem;
 
   --background: oklch(1 0 0);
@@ -155,7 +172,6 @@
 /*---break--- */
 
 .dark {
-
   --background: oklch(0.145 0 0);
 
   --foreground: oklch(0.985 0 0);
@@ -228,4 +244,17 @@
   body {
     @apply bg-background text-foreground;
   }
+}
+
+.Active {
+  color: rgba(39, 174, 96, 1);
+}
+.Inactive {
+  color: rgba(72, 52, 212, 1);
+}
+.Delete {
+  color: rgba(235, 77, 75, 1);
+}
+.Pending {
+  color: rgba(240, 147, 43, 1);
 }
